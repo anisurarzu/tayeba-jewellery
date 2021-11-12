@@ -1,0 +1,30 @@
+.banner-1 {
+  background: url("../../../images/ring-7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-2 {
+  background: url("../../../images/ring-9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-design {
+  background: rgb(79, 79, 79);
+  opacity: 0.8;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.banner-design * {
+  opacity: 1;
+}
+.banner-design h2 {
+  font-family: "Henny Penny", cursive;
+  color: white;
+}
+.banner-design p {
+  font-family: "Titillium Web", sans-serif;
+}
