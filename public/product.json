@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Diamond Band Ring",
+    "rating": 4,
+    "description": "Natural Red Garnet Gemstone Rings For Women 925 Sterling Silver Wedding Rings Fine Jewelry Gifts Vintage Ruby Red Stone SR52",
+    "price": 120000,
+    "img": "https://i.ibb.co/Xjwz6XW/ring-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Diamond Ring",
+    "rating": 3,
+    "description": "Natural Red Garnet Gemstone Rings For Women 925 Sterling Silver Wedding Rings Fine Jewelry Gifts Vintage Ruby Red Stone SR52",
+    "price": 194000,
+    "img": "https://i.ibb.co/Rc6SDMJ/ring-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Extra Large Bamboo",
+    "rating": 5,
+    "description": "ORSA JEWELS Luxury Big 5ct DE VVS Moissanite Ring for Women Brilliant Round Cut Gem Stone for Proposal Engagement Wedding SMR52",
+    "price": 123600,
+    "img": "https://i.ibb.co/bJXxtqr/ring-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Lapis Hoop Earrings",
+    "rating": 5,
+    "description": "2021 Modern Fashion Women Ring Trend White AAA Crystal Zircon Engagement Design Rings for Women Wedding Jewelry Gift",
+    "price": 17680,
+    "img": "https://i.ibb.co/rpqK9hq/ring-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Pear-Shaped Black",
+    "rating": 2,
+    "description": "Lord Voldemort Horcrux Ring The Resurrection Stone Marvolo Gaunt Vintage Deathly Hallows Dumbledore Crystal Woman And Men",
+    "price": 123400,
+    "img": "https://i.ibb.co/2cbsw0q/ring-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rose Gold Panther",
+    "rating": 2,
+    "description": "AOLOSHOW Luxury Princess Leaf Engagement Ring for Women Girl white Stone Copper Material Wedding Zircon Ring Collier Femme RN015",
+    "price": 128000,
+    "img": "https://i.ibb.co/9GSz6P2/ring-6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "EarSterling Silver Bead",
+    "rating": 5,
+    "description": "DODO Luxury Full AAA Zircon Rings For Women Silver Color Band Rings Jewelry Promise Wedding Anel Statement Anillos Wholesale",
+    "price": 180090,
+    "img": "https://i.ibb.co/n6dfrnt/ring-7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Women’s Bijou Ear",
+    "rating": 3,
+    "description": "big size13*18mm Natural London Blue Topaz Gemstone Trendy Ring for Women Real 925 Sterling Silver Fine Jewelry birthstone gift",
+    "price": 37500,
+    "img": "https://i.ibb.co/cDx6mnC/ring-8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Women’s Bijou Ear-2",
+    "rating": 3,
+    "description": "big size 16*19mm Natural London Blue Topaz Gemstone Trendy Ring for Women Real 925 Sterling Silver Fine Jewelry birthstone gift",
+    "price": 175000,
+    "img": "https://i.ibb.co/sPqpLHM/ring-9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Women’s Clay Pave",
+    "rating": 3,
+    "description": "Butterfly Adjustable Open Mouth Rings Hollow Flying Insect 925 Sterling Silver Finger Women Couple Luxury Zircon Rings Jewelry",
+    "price": 150000,
+    "img": "https://i.ibb.co/g7XkNv8/ring-10.jpg"
+  }
+]

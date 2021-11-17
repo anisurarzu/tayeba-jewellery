@@ -13,7 +13,7 @@
 }
 
 .banner-design {
-  background: rgb(79, 79, 79);
+  background: #f4f4f4;
   opacity: 0.8;
   padding-left: 10px;
   padding-right: 10px;
@@ -23,8 +23,8 @@
 }
 .banner-design h2 {
   font-family: "Henny Penny", cursive;
-  color: white;
 }
 .banner-design p {
+  color: black;
   font-family: "Titillium Web", sans-serif;
 }

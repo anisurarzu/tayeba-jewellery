@@ -1,0 +1,28 @@
+.nav-container a {
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 93, 1);
+  font-family: "Titillium Web", sans-serif;
+}
+
+a.logo {
+  padding-left: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-container p {
+    height: 100%;
+    width: 250px;
+
+    margin-top: 15px;
+    font-family: "Righteous", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: -1;
+  }
+}
