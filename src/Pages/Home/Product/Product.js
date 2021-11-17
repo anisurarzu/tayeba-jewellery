@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { id, name, price, description, img } = product;
+  const { _id, name, price, description, img } = product;
   console.log(name);
   return (
     <div className="  lg:hover:shadow-2xl pt-8 p-8 rounded">
@@ -15,10 +15,11 @@ const Product = ({ product }) => {
             {price}৳
           </p>
           <p className="text-gray-900 py-2">{description}</p>
-
-          <button className="btn-design border-2 border-black hover:bg-gray-700 hover:text-white text-center py-2 px-4 rounded-full">
-            <i className="fas fa-truck"></i> Buy Now
-          </button>
+          <Link to={`/product/${_id}`}>
+            <button className="btn-design border-2 border-black hover:bg-gray-700 hover:text-white text-center py-2 px-4 rounded-full">
+              <i className="fas fa-truck"></i> Buy Now
+            </button>
+          </Link>
         </div>
       ) : (
         <Spin></Spin>

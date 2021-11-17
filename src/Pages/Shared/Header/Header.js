@@ -9,10 +9,9 @@ import useAuth from "../../../hooks/useAuth";
 const Header = () => {
   const [navDrawerVisible, setNavDrawerVisible] = useState(false);
   const { user, logOut } = useAuth();
-
   return (
     <div className="mx-auto">
-      <nav className=" px-5 bg-white fixed left-0 right-0 top-0 h-16 lg:h-20 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
+      <nav className=" px-5 bg-black fixed left-0 right-0 top-0 h-16 lg:h-12 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
         <NavLink
           className="lg:h-full logo flex items-center lg:font-extrabold"
           to="/home"

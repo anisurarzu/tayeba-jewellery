@@ -101,16 +101,15 @@ const useFirebase = () => {
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
 
-  const logout = () => {
-    setIsLoading(true);
+  const logOut = () => {
     signOut(auth)
       .then(() => {
+        setUser({});
         // Sign-out successful.
       })
       .catch((error) => {
         // An error happened.
-      })
-      .finally(() => setIsLoading(false));
+      });
   };
 
   const saveUser = (email, displayName, method) => {
@@ -133,7 +132,7 @@ const useFirebase = () => {
     registerUser,
     loginUser,
     signInWithGoogle,
-    logout,
+    logOut,
   };
 };
 
