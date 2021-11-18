@@ -25,7 +25,7 @@ const ProductDetails = () => {
   const onSubmit = (data) => {
     let orderStatus = "pending";
     data.status = orderStatus;
-    fetch("https://frightful-demon-22619.herokuapp.com/orders", {
+    fetch("http://localhost:5000/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -62,11 +62,6 @@ const ProductDetails = () => {
               <p className="p-2 text-center text-gray-600 text-base">
                 {singleService.description}
               </p>
-              <Link to="/contact">
-                <button className="shadow rounded-lg text-white font-bold btn-design p-2">
-                  Contact Us
-                </button>
-              </Link>
             </div>
             <div className="py-8 border-l-2 border-dotted">
               <h3 className="text-2xl text-gray-600 font-bold py-4">
@@ -76,7 +71,7 @@ const ProductDetails = () => {
                   place order form
               -------------------- */}
               <form
-                className=" grid grid-cols-1 gap-2 justify-center items-center border-2 border-dotted border-red-500 mx-12"
+                className=" grid grid-cols-1 gap-2 justify-center items-center border-2 border-dotted border-black-500 mx-12"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <div className="pt-8">
@@ -106,23 +101,6 @@ const ProductDetails = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="type " className="text-gray-700 pr-4">
-                    Type of Your Product :
-                  </label>
-                  <select
-                    className=" border-2 p-2 w-1/3 mr-8 rounded"
-                    {...register("type")}
-                    required
-                  >
-                    <option value="foods">Foods</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="vehicles">Vehicles</option>
-                    <option value="books">Books</option>
-                    <option value="materials">Materials</option>
-                  </select>
-                </div>
-
-                <div>
                   <input
                     className="border-2 p-2 w-1/3 mr-8 rounded"
                     type="number"
@@ -137,25 +115,9 @@ const ProductDetails = () => {
                     required
                   />
                 </div>
-                <br />
-                <label htmlFor="destination">Destination:</label>
-                <div>
-                  <input
-                    className="border-2 p-2 w-1/3 mr-8 rounded"
-                    {...register("sending_location")}
-                    placeholder="from"
-                    required
-                  />
-                  <input
-                    className="border-2 p-2 w-1/3 mr-8 rounded"
-                    {...register("receiving_location")}
-                    placeholder="to"
-                    required
-                  />
-                </div>
 
                 <input
-                  className="p-2 btn-design mx-16 xl:mx-64 lg:mx-64  my-4 text-white font-bold rounded"
+                  className="p-2 btn-design mx-16 xl:mx-64 lg:mx-64  bg-black my-4 text-white font-bold rounded"
                   type="submit"
                 />
               </form>

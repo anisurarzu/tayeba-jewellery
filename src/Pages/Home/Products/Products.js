@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Spin } from "antd";
 
 import useProducts from "../../../hooks/useProducts";
@@ -6,8 +5,6 @@ import Product from "../Product/Product";
 
 const Products = () => {
   const { products } = useProducts();
-
-  const [newProducts, setNewProducts] = useState();
 
   return (
     <div className="xl:px-44 lg:px-44 md:px-32 sm:px-8 ">
@@ -23,7 +20,7 @@ const Products = () => {
             ))} */}
 
             {products.slice(0, 6).map((product) => (
-              <Product key={products._id} product={product}></Product>
+              <Product key={product._id} product={product}></Product>
             ))}
           </div>
         </>

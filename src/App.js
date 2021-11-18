@@ -8,6 +8,11 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+
+import AllProducts from "./Pages/AllProducts/AllProducts/AllProducts";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import OrderDetails from "./Pages/Dashboard/OrderDetails/OrderDetails";
 function App() {
   return (
     <div className="App">
@@ -24,9 +29,20 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="/allProducts">
+              <AllProducts></AllProducts>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
             <PrivateRoute path="/product/:productId">
               <ProductDetails></ProductDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/order/:orderId">
+              <OrderDetails></OrderDetails>
             </PrivateRoute>
           </Switch>
           <Footer></Footer>

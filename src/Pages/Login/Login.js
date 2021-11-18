@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
@@ -36,19 +37,21 @@ const Login = () => {
           Email
         </label>
         <input
-          onBlur={handleOnChange}
+          onChange={handleOnChange}
           className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
           type="email"
           required
+          name="email"
           placeholder="your email"
         />
         <label className="text-left text-green-500" htmlFor="password">
           Password
         </label>
         <input
-          onBlur={handleOnChange}
+          onChange={handleOnChange}
           className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
           type="password"
+          name="password"
           placeholder="your password"
           required
         />
@@ -60,6 +63,12 @@ const Login = () => {
           Login
         </button>
       </form>
+
+      <NavLink style={{ textDecoration: "none" }} to="/register">
+        <button>New User? Please Register</button>
+      </NavLink>
+      {user?.email && <span>Login successfully!</span>}
+      {authError && <span>{authError}</span>}
 
       <div>-----Or----</div>
       <button

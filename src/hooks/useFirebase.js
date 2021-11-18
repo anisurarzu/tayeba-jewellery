@@ -17,7 +17,7 @@ initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+
   const [authError, setAuthError] = useState("");
   const [admin, setAdmin] = useState(false);
   const [token, setToken] = useState("");
@@ -26,7 +26,6 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   const registerUser = (email, password, name, history) => {
-    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError("");
@@ -45,12 +44,10 @@ const useFirebase = () => {
       .catch((error) => {
         setAuthError(error.message);
         console.log(error);
-      })
-      .finally(() => setIsLoading(false));
+      });
   };
 
   const loginUser = (email, password, location, history) => {
-    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const destination = location?.state?.from || "/";
@@ -59,24 +56,22 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setAuthError(error.message);
-      })
-      .finally(() => setIsLoading(false));
+      });
   };
 
   const signInWithGoogle = (location, history) => {
-    setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         saveUser(user.email, user.displayName, "PUT");
+        // saveUser(user.email, user.displayName, "PUT");
         setAuthError("");
         const destination = location?.state?.from || "/";
         history.replace(destination);
       })
       .catch((error) => {
         setAuthError(error.message);
-      })
-      .finally(() => setIsLoading(false));
+      });
   };
 
   // observer user state
@@ -90,13 +85,12 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
-      setIsLoading(false);
     });
     return () => unsubscribed;
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://stark-caverns-04377.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -114,7 +108,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://stark-caverns-04377.herokuapp.com/users", {
+    fetch("http://localhost:5000/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -127,7 +121,7 @@ const useFirebase = () => {
     user,
     admin,
     token,
-    isLoading,
+
     authError,
     registerUser,
     loginUser,

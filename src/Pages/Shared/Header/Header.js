@@ -11,14 +11,12 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <div className="mx-auto">
-      <nav className=" px-5 bg-black fixed left-0 right-0 top-0 h-16 lg:h-12 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
+      <nav className=" px-6 bg-black fixed left-0 right-0 top-0 h-16 lg:h-16 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
         <NavLink
           className="lg:h-full logo flex items-center lg:font-extrabold"
           to="/home"
         >
-          <p>
-            <img className="w-1/2" src="" alt="" />
-          </p>
+          <p>Tayeba jewellery</p>
         </NavLink>
         <button
           className="lg:hidden "
@@ -30,11 +28,10 @@ const Header = () => {
         <div className="text-sm items-center text-green-400 hidden lg:flex">
           <NavLink to="/home">Home</NavLink>
 
-          <NavLink to="/admin">Admin</NavLink>
           <div>
             {user?.email && (
               <span>
-                <NavLink to="/myorders">My Orders</NavLink>
+                <NavLink to="/dashboard">Dashboard</NavLink>
               </span>
             )}
           </div>

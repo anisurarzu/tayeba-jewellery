@@ -37,8 +37,9 @@ const Footer = () => {
               <img src="" alt="" />
             </Link> */}
             <p className="mt-2 text-sm text-gray-500">
-              Made with in Dhaka, Bangladesh. Going and the Going logo are
-              trademarks of Going Ltd. © 2021 Going Ltd. All rights reserved.
+              Made with in Dhaka, Bangladesh. Tayeba Jewellery and the Tayeba
+              Jewellery logo are trademarks of Tayeba Jewellery Ltd. © 2021
+              Tayeba Jewellery Ltd. All rights reserved.
             </p>
           </div>
           <div
@@ -216,7 +217,7 @@ const Footer = () => {
                 className="text-white ml-1"
                 target="_blank"
               >
-                Going Courier
+                Tayeba Jewellery
               </a>
             </p>
             <span
