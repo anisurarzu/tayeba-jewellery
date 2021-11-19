@@ -34,6 +34,13 @@ const NavDrawer = ({ visible, setVisible, user, logOut }) => {
           >
             Home
           </NavLink>
+          <NavLink
+            to="/allProducts"
+            className="py-2 text-gray-700"
+            onClick={closeDrawer}
+          >
+            Explore
+          </NavLink>
 
           <div>
             {user?.email && (
@@ -49,7 +56,7 @@ const NavDrawer = ({ visible, setVisible, user, logOut }) => {
 
           {user?.email ? (
             <button
-              className="text-sm w-full block mt-2 btn-design text-white rounded-md shadow p-2 "
+              className="text-sm w-full block mt-2 bg-black text-white rounded-md shadow p-2 "
               onClick={() => {
                 closeDrawer();
                 logOut();
@@ -59,7 +66,7 @@ const NavDrawer = ({ visible, setVisible, user, logOut }) => {
             </button>
           ) : (
             <NavLink to="/login" onClick={closeDrawer}>
-              <span className="text-sm w-full block mt-2 btn-design text-white rounded-md shadow p-2 px-4">
+              <span className="text-sm w-full block mt-2 bg-black  text-white rounded-md shadow p-2 px-4">
                 <i className="fas fa-sign-in-alt pr-2"></i> Login
               </span>
             </NavLink>

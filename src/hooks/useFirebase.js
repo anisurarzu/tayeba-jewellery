@@ -17,6 +17,7 @@ initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const [authError, setAuthError] = useState("");
   const [admin, setAdmin] = useState(false);
@@ -31,6 +32,7 @@ const useFirebase = () => {
         setAuthError("");
         const newUser = { email, displayName: name };
         setUser(newUser);
+        setLoading(false);
         // save user to the database
         saveUser(email, name, "POST");
         // send name to firebase after creation
@@ -56,7 +58,8 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setAuthError(error.message);
-      });
+      })
+      .finally(() => setLoading(false));
   };
 
   const signInWithGoogle = (location, history) => {
@@ -79,11 +82,13 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        setLoading(false);
         getIdToken(user).then((idToken) => {
           setToken(idToken);
         });
       } else {
         setUser({});
+        setLoading(false);
       }
     });
     return () => unsubscribed;
@@ -99,6 +104,7 @@ const useFirebase = () => {
     signOut(auth)
       .then(() => {
         setUser({});
+        setLoading(false);
         // Sign-out successful.
       })
       .catch((error) => {
@@ -107,6 +113,7 @@ const useFirebase = () => {
   };
 
   const saveUser = (email, displayName, method) => {
+    console.log(displayName);
     const user = { email, displayName };
     fetch("http://localhost:5000/users", {
       method: method,
@@ -121,7 +128,7 @@ const useFirebase = () => {
     user,
     admin,
     token,
-
+    loading,
     authError,
     registerUser,
     loginUser,

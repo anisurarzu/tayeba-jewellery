@@ -72,7 +72,7 @@ const Login = () => {
 
       <div>-----Or----</div>
       <button
-        className="btn-design text-white rounded-lg"
+        className="bg-black p-2 text-white rounded-lg"
         onClick={handleGoogleSignIn}
       >
         <i className="fab fa-google pr-2"></i> Sign In With Google

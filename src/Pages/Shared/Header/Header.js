@@ -11,9 +11,9 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <div className="mx-auto">
-      <nav className=" px-6 bg-black fixed left-0 right-0 top-0 h-16 lg:h-16 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
+      <nav className=" px-6 bg-gray-500 fixed left-0 right-0 top-0 h-16 lg:h-16 shadow-lg text-sm font-bold nav-container flex justify-between items-center z-50">
         <NavLink
-          className="lg:h-full logo flex items-center lg:font-extrabold"
+          className="lg:h-full logo flex items-center lg:font-extrabold text-white"
           to="/home"
         >
           <p>Tayeba jewellery</p>
@@ -27,6 +27,7 @@ const Header = () => {
 
         <div className="text-sm items-center text-green-400 hidden lg:flex">
           <NavLink to="/home">Home</NavLink>
+          <NavLink to="/allProducts">Explore</NavLink>
 
           <div>
             {user?.email && (

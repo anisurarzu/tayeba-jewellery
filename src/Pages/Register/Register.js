@@ -20,17 +20,17 @@ const Register = () => {
       alert("Your password did not match");
       return;
     }
-    console.log(loginData);
+    console.log("information", loginData);
     registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="mx-auto flex justify-center">
       <form
         onSubmit={handleLoginSubmit}
-        className="flex flex-col bg-white rounded shadow-lg p-4 mt-12"
+        className="flex flex-col bg-white rounded shadow-lg p-4 mt-12 "
       >
-        <label className="text-left text-green-500" htmlFor="name">
+        <label className="text-left text-black" htmlFor="name">
           Name
         </label>
         <input
@@ -38,9 +38,10 @@ const Register = () => {
           className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
           type="text"
           required
+          name="name"
           placeholder="your name"
         />
-        <label className="text-left text-green-500" htmlFor="email">
+        <label className="text-left text-black" htmlFor="email">
           Email
         </label>
         <input
@@ -51,7 +52,7 @@ const Register = () => {
           name="email"
           placeholder="your email"
         />
-        <label className="text-left text-green-500" htmlFor="password">
+        <label className="text-left text-black" htmlFor="password">
           Password
         </label>
         <input
@@ -62,7 +63,7 @@ const Register = () => {
           placeholder="your password"
           required
         />
-        <label className="text-left text-green-500" htmlFor="password">
+        <label className="text-left text-black" htmlFor="password">
           Re-type Your Password
         </label>
         <input
@@ -76,24 +77,25 @@ const Register = () => {
 
         <button
           type="submit"
-          className="flex items-center justify-center h-12 px-6 w-64 bg-green-400 mt-8 rounded font-bold text-sm text-blue-100 hover:bg-blue-600"
+          className="flex items-center justify-center h-12 px-6 w-64 bg-black mt-8 rounded font-bold text-sm text-blue-100 hover:bg-blue-600"
         >
           Register
         </button>
+        <br />
+        <NavLink style={{ textDecoration: "none" }} to="/login">
+          <button variant="text">Already Registered? Please Login</button>
+        </NavLink>
       </form>
 
-      <NavLink style={{ textDecoration: "none" }} to="/login">
-        <button variant="text">Already Registered? Please Login</button>
-      </NavLink>
       {user?.email && (
         <div
-          class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+          className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
           role="alert"
         >
-          <div class="flex">
-            <div class="py-1">
+          <div className="flex">
+            <div className="py-1">
               <svg
-                class="fill-current h-6 w-6 text-teal-500 mr-4"
+                className="fill-current h-6 w-6 text-teal-500 mr-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -101,7 +103,7 @@ const Register = () => {
               </svg>
             </div>
             <div>
-              <p class="text-sm">User Created SuccessFully!</p>
+              <p className="text-sm">User Created SuccessFully!</p>
             </div>
           </div>
         </div>

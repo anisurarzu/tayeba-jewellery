@@ -16,8 +16,8 @@ const Product = ({ product }) => {
           </p>
           <p className="text-gray-900 py-2">{description}</p>
           <Link to={`/product/${_id}`}>
-            <button className="btn-design border-2 border-black hover:bg-gray-700 hover:text-white text-center py-2 px-4 rounded-full">
-              <i className="fas fa-truck"></i> Buy Now
+            <button className="btn-design border-2 text-black border-black hover:bg-gray-700 hover:text-white text-center py-2 px-4 rounded-full">
+              Buy Now
             </button>
           </Link>
         </div>

@@ -205,6 +205,7 @@ const Footer = () => {
         container
         mx-auto
         py-4
+        bg-black
         px-5
         flex flex-wrap flex-col
         sm:flex-row

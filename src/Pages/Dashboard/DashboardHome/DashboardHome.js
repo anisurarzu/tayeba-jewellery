@@ -15,7 +15,9 @@ const DashboardHome = () => {
   }, []);
   return (
     <div className="grid xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1">
-      <div></div>
+      <div>
+        <h1 className="text-2xl font-bold">Welcome To Tayeba Jewellery</h1>{" "}
+      </div>
       <div></div>
 
       <div className="border-2 border-black bg-black rounded w-32 h-32 mt-4">
