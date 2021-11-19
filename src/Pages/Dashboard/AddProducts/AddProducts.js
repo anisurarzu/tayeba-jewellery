@@ -8,11 +8,13 @@ const AddProducts = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedId) {
-        setMessage("SuccessFully Inserted!");
-      }
-    });
+    axios
+      .post("https://obscure-journey-77099.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          setMessage("SuccessFully Inserted!");
+        }
+      });
   };
   return (
     <div className="pt-24">

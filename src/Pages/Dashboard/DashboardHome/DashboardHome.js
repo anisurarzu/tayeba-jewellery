@@ -6,7 +6,7 @@ const DashboardHome = () => {
   const { user } = useAuth();
   let email = user?.email;
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://obscure-journey-77099.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         const myOrders = data.filter((data) => data.email === email);

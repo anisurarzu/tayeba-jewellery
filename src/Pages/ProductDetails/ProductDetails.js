@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(`https://obscure-journey-77099.herokuapp.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => setSingleService(data));
   }, []);
@@ -25,7 +25,7 @@ const ProductDetails = () => {
   const onSubmit = (data) => {
     let orderStatus = "pending";
     data.status = orderStatus;
-    fetch("http://localhost:5000/orders", {
+    fetch("https://obscure-journey-77099.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

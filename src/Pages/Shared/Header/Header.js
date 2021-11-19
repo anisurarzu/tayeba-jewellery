@@ -38,7 +38,7 @@ const Header = () => {
           </div>
           <div>
             {user?.email && (
-              <span className="user-details pl-8 text-gray-600">
+              <span className="user-details pl-8 text-gray-800">
                 {user?.displayName}
               </span>
             )}

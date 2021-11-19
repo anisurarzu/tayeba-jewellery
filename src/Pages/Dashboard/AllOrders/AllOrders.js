@@ -7,7 +7,7 @@ const AllOrders = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://obscure-journey-77099.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         setOrder(data);
@@ -18,7 +18,7 @@ const AllOrders = () => {
     const check = window.confirm("Are you sure,you want to cancel this order?");
 
     if (check) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://obscure-journey-77099.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

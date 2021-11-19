@@ -10,7 +10,7 @@ const OrderDetails = () => {
   // console.log("orderid", orderId);
   console.log(order);
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${orderId}`)
+    fetch(`https://obscure-journey-77099.herokuapp.com/orders/${orderId}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, []);
@@ -23,7 +23,7 @@ const OrderDetails = () => {
   };
   const handleUpdateOrderStatus = (e) => {
     e.preventDefault();
-    const url = `http://localhost:5000/orders/${orderId}`;
+    const url = `https://obscure-journey-77099.herokuapp.com/orders/${orderId}`;
     fetch(url, {
       method: "PUT",
       headers: {

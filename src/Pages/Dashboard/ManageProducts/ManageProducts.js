@@ -6,7 +6,7 @@ const ManageProducts = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://obscure-journey-77099.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const check = window.confirm("Are you sure,you want to cancel this order?");
 
     if (check) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://obscure-journey-77099.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
