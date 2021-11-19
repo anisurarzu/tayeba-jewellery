@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory, useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
