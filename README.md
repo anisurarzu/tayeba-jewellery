@@ -1,6 +1,6 @@
 # Tayeba Jewellery
 
-Live Preview here [Tayeba Jewellery](https://doctor-bari-hospital.netlify.app/).
+Live Preview here [Tayeba Jewellery](https://tayeba-a4440.web.app/).
 
 ## Technology Stack
 
