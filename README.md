@@ -20,7 +20,9 @@ For database we use Mongo DB database
 
 ## About This Project
 
-it's a web application based on online jewellery shop service .Tayeba Jewellery guarantees reliable product to our customer,also provide home delivery at the right location in the right time through its efficient distribution management.
+It's a web application based on online jewellery shop service.Users can chose  product,place order,cancel order,add review also creating user account.
+ Also has admin pannel. Admin can add products,delete products,check order status,confirm/delete order.
+
 
 ## Upcoming Services
 
